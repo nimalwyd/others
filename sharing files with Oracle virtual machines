@@ -20,7 +20,7 @@ A)SHARE A FOLDER IN YOUR HOST OS(MASTER COMPUTER) WITH THE GUEST OS
 
 i)in your guest os Devices-->Shared folder-->shared folders settings   , there add a new folder to share and also make it auto mount and make it permenant
 ii)sudo mount -t vboxsf sharedfoldername where-to-mount-in-guest-os  (mkae sure you have created proper mounting folder before running the above command)
-
+ex:  sudo mount -t vboxsf sandbox /home/nimal/Desktop/a/
 
 
 
