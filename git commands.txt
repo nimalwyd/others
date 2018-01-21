@@ -1,0 +1,43 @@
+git reset --hard HEAD^    // will reset to previous commit, helpful if u ran into merge conflicts and cant remove merge heads from the code
+git checkout HEAD~X // x is the number of commits t go back, will take the head to x number of commits from current position
+git branch -D branchname //will delete a branch(local)
+git init
+
+//if the gitcode is really badly messed up at your computer you can go back to a previous version of code as:
+1)git log // check git commit history and copy the number shah id of commit to which we want to go back
+2)git reset --hard  thenumbercopiedearliergoeshere  //it will restore the project to exactly as the previous software version 
+                            // which was pressent in the computer at that time of commit
+
+
+git add README.md
+git remote add origin remote_url
+git add .
+git commit -m "message goes here"
+git pull origin(or url) branchname   // it will download all the contents of the branch to your folder
+git clone origin(or url) branchname  // it will download the content of the branch as a single folder with .git inside it
+git push -u origin master
+gitk
+git mergetool  // to fix merge conflictss
+git branch -m old_branch new_branch        // Rename branch locally 
+git remote remove origin  // will remove the origin 
+git remote set-url --add <name> <newurl>  // will add  a new url
+git mergetool
+git merge origin/master --allow-unrelated-histories  // for the error failed to merge unrelated histories during git pulln
+
+
+
+managing merge conflic with vimdiff
+-----------------------------------
+git mergetool   // to fix git conflicts
+use ]c or [c to navigate to different conflicts
+:diffget local or :diffget base :diffget remote to select the version of code we want 
+:diffupdate     // to remove left over spacing issues
+:only   //once done with reviewing all conflicts , this shows only the middle/merged file
+:wq   //save and quit
+:diffupdate   // rescan the file for differences
+:q!   // quit without saving
+i   //to enter insert mode 
+ctrl+c    // to exit insert mode
+ctr+w w // move to next window
+git rebase --continue  // if you were trying to do a git pull when ran into merge conflicts, do this step
+git mergetool   // to fix git conflicts
