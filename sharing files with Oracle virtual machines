@@ -1,0 +1,26 @@
+Easy way:
+
+in the oraclVM settings-->general-->Advanced
+set shared clipboard and Drag'n'Drop both to Bidirectional
+
+
+---------------OR to share a specific folder altogether------------------
+
+
+
+1.Install oracle virtualbox extension pack for the exact version number of your virtual box
+2.make sure that Devices-->install guest additions CD image is appearing the guest os(if not go to virtual box settings --> user interface and tick both the header and footer menus there, and  also tick at show at top of screen)
+3.Download VBoxGuestAdditions_5.0.40.iso(choose yout oracle vm version number here) in your host os
+4.in your guest os Devices-->install guest additions CD image
+5.sudo usermod -aG vboxsf $(whoami)   (do this step only if necessary)
+
+AFTER THIS MUCH IS DONE
+
+A)SHARE A FOLDER IN YOUR HOST OS(MASTER COMPUTER) WITH THE GUEST OS
+
+i)in your guest os Devices-->Shared folder-->shared folders settings   , there add a new folder to share and also make it auto mount and make it permenant
+ii)sudo mount -t vboxsf sharedfoldername where-to-mount-in-guest-os  (mkae sure you have created proper mounting folder before running the above command)
+
+
+
+
