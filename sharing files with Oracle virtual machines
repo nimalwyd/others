@@ -1,10 +1,20 @@
+in VMplayer
+add these to my *.vmx files to get to the bios and enable copy-paste:
+
+isolation.tools.copy.disable = "FALSE"
+isolation.tools.paste.disable = "FALSE"
+bios.bootDelay = "2000"
+
+---------------------------------------------------------------------
+in VirtualBox
 Easy way:
 
 in the oraclVM settings-->general-->Advanced
 set shared clipboard and Drag'n'Drop both to Bidirectional
 
 
----------------OR to share a specific folder altogether------------------
+
+OR to share a specific folder altogether
 
 
 
